@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funzone-booking</title>
+    <link rel="stylesheet" href="styles/queue.css">
+</head>
+<body>
+    <div class="topnav">
+        <h1>Roller Coaster - 11.00</h1>
+    </div>
+    <div class="content">
+        <div class="top">
+            <div class="order">
+                <h1 id="queue" onchange="queueCheck()">Queue now 0/10</h1>
+                <br><br>
+                <h3>Enter your number of people</h3>
+                <input type="number" id="num" value="0" min="1" onchange="calculateCost()">
+                <h2 id="cost" >0 Baht</h2>
+            </div>
+            <img src="assets/RollerCoaster.png " alt="">
+        </div>
+        <div class="bottom">
+            <div class="order">
+                <br><br>
+                <h2>* โปรดโอนแล้วแนบรูป *</h2>
+                <h3>Confirm Payment</h3>
+                <input type="file" accept="image/png, image/jpeg" id="pic">
+                <br><br>
+                <input type="checkbox" id="confirm"> Confirm Order
+                <br><br>
+                <button onclick="orderQueue(0, 0)">PLACE ORDER</button>
+            </div>
+            <img src="assets/qr.png" alt="">
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
